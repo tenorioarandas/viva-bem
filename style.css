@@ -13,19 +13,39 @@ header {
   justify-content: center;
   height: 15vh;
 }
+@media (min-width: 1280px) {
+  header {
+    height: 20vh;
+  }
+}
 header .nav-bar {
   background: linear-gradient(90deg, rgb(66, 71, 162) 0%, rgb(82, 176, 149) 100%);
   display: flex;
   align-items: center;
   justify-content: space-around;
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
-  border-radius: 50px;
+  border-radius: 5rem;
   width: 90%;
   height: 55%;
+}
+@media (min-width: 1280px) {
+  header .nav-bar {
+    height: 60%;
+  }
+}
+@media (min-width: 1280px) {
+  header .nav-bar {
+    height: 55%;
+  }
 }
 header .nav-bar img {
   width: 20vw;
   height: 100%;
+}
+@media (min-width: 1536px) {
+  header .nav-bar img {
+    width: 15vw;
+  }
 }
 header .nav-bar ul {
   display: flex;
@@ -40,17 +60,27 @@ header .nav-bar ul li a {
 }
 @media (min-width: 640px) {
   header .nav-bar ul li a {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 @media (min-width: 768px) {
   header .nav-bar ul li a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 1024px) {
   header .nav-bar ul li a {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1280px) {
+  header .nav-bar ul li a {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1536px) {
+  header .nav-bar ul li a {
+    font-size: 1.5rem;
   }
 }
 
@@ -67,6 +97,23 @@ main .hero {
     height: 35vh;
   }
 }
+@media (min-width: 1280px) {
+  main .hero {
+    height: 60vh;
+  }
+}
+@media (min-width: 1536px) {
+  main .hero {
+    background-image: url("./images/capa-viva-bem.png");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    align-items: start;
+    text-align: start;
+    margin-left: 2rem;
+    height: 65vh;
+  }
+}
 main .hero .gradient-text {
   background: linear-gradient(90deg, rgb(17, 115, 212) 0%, rgb(51, 204, 115) 100%);
   -webkit-background-clip: text;
@@ -77,17 +124,28 @@ main .hero .gradient-text {
 }
 @media (min-width: 640px) {
   main .hero .gradient-text {
-    font-size: 3.4rem;
+    font-size: 3.5rem;
   }
 }
 @media (min-width: 768px) {
   main .hero .gradient-text {
-    font-size: 4rem;
+    font-size: 3.6rem;
   }
 }
 @media (min-width: 1024px) {
   main .hero .gradient-text {
-    font-size: 5rem;
+    font-size: 3.7rem;
+  }
+}
+@media (min-width: 1280px) {
+  main .hero .gradient-text {
+    font-size: 3.8rem;
+  }
+}
+@media (min-width: 1536px) {
+  main .hero .gradient-text {
+    font-size: 4rem;
+    width: 60%;
   }
 }
 main .hero p {
@@ -98,17 +156,28 @@ main .hero p {
 }
 @media (min-width: 640px) {
   main .hero p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 768px) {
   main .hero p {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
 }
 @media (min-width: 1024px) {
   main .hero p {
-    font-size: 2rem;
+    font-size: 1.35rem;
+  }
+}
+@media (min-width: 1280px) {
+  main .hero p {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1536px) {
+  main .hero p {
+    font-size: 1.5rem;
+    width: 60%;
   }
 }
 main .hero .box-btn {
@@ -140,13 +209,22 @@ main .hero .box-btn button {
 }
 @media (min-width: 768px) {
   main .hero .box-btn button {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 @media (min-width: 1024px) {
   main .hero .box-btn button {
-    font-size: 1.6rem;
-    padding: 1.5rem;
+    font-size: 1.35rem;
+  }
+}
+@media (min-width: 1280px) {
+  main .hero .box-btn button {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1536px) {
+  main .hero .box-btn button {
+    font-size: 1.5rem;
   }
 }
 main .hero .box-btn .btn-blue {
@@ -173,22 +251,32 @@ main .exams {
     height: 40vh;
   }
 }
+@media (min-width: 1280px) {
+  main .exams {
+    height: 70vh;
+  }
+}
 main .exams h2 {
   background: linear-gradient(90deg, rgb(17, 115, 212) 0%, rgb(51, 204, 115) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Poppins", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   width: 90%;
 }
 @media (min-width: 768px) {
   main .exams h2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 }
 @media (min-width: 1024px) {
   main .exams h2 {
-    font-size: 2.4rem;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1536px) {
+  main .exams h2 {
+    font-size: 2.2rem;
   }
 }
 main .exams p {
@@ -199,10 +287,15 @@ main .exams p {
 }
 @media (min-width: 768px) {
   main .exams p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 1024px) {
+  main .exams p {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1536px) {
   main .exams p {
     font-size: 1.6rem;
   }
@@ -223,6 +316,11 @@ main .exams .container-cards {
   main .exams .container-cards {
     flex-direction: row;
     height: 40%;
+  }
+}
+@media (min-width: 1280px) {
+  main .exams .container-cards {
+    height: 45%;
   }
 }
 main .exams .container-cards div {
@@ -247,19 +345,36 @@ main .exams .container-cards div {
     height: 100%;
   }
 }
+@media (min-width: 1024px) {
+  main .exams .container-cards div {
+    justify-content: space-evenly;
+    width: 25%;
+    height: 90%;
+  }
+}
 main .exams .container-cards div h3 {
   color: #04031c;
   font-family: "Poppins", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 @media (min-width: 768px) {
   main .exams .container-cards div h3 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 1024px) {
   main .exams .container-cards div h3 {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1280px) {
+  main .exams .container-cards div h3 {
     font-size: 1.6rem;
+  }
+}
+@media (min-width: 1536px) {
+  main .exams .container-cards div h3 {
+    font-size: 1.8rem;
   }
 }
 main .exams .container-cards div p {
@@ -277,12 +392,18 @@ main .exams .container-cards div p {
     width: 100%;
   }
 }
+@media (min-width: 1536px) {
+  main .exams .container-cards div p {
+    font-size: 1.6rem;
+    width: 90%;
+  }
+}
 main .prevention {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 330vh;
+  height: 350vh;
 }
 @media (min-width: 640px) {
   main .prevention {
@@ -299,22 +420,37 @@ main .prevention {
     height: 95vh;
   }
 }
+@media (min-width: 1280px) {
+  main .prevention {
+    height: 145vh;
+  }
+}
+@media (min-width: 1536px) {
+  main .prevention {
+    height: 170vh;
+  }
+}
 main .prevention h2 {
   background: linear-gradient(90deg, rgb(51, 115, 210) 0%, rgb(111, 149, 199) 25%, rgb(123, 181, 245) 50%, rgb(0, 116, 238) 75%, rgb(94, 167, 239) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "Poppins", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 @media (min-width: 768px) {
   main .prevention h2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 }
 @media (min-width: 1024px) {
   main .prevention h2 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     margin-top: 2rem;
+  }
+}
+@media (min-width: 1536px) {
+  main .prevention h2 {
+    font-size: 2.2rem;
   }
 }
 main .prevention .container-masc {
@@ -322,33 +458,60 @@ main .prevention .container-masc {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  justify-content: space-between;
   height: 95%;
+}
+main .prevention .container-masc .separator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 200vh;
+}
+main .prevention .container-masc .separator-bottom {
+  height: 135vh;
 }
 @media (min-width: 1024px) {
   main .prevention .container-masc {
     justify-content: space-around;
   }
+}
+@media (min-width: 1024px) and (min-width: 1024px) {
   main .prevention .container-masc .separator {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     width: 100vw;
     height: 40vh;
   }
+}
+@media (min-width: 1024px) and (min-width: 1280px) {
+  main .prevention .container-masc .separator {
+    height: 60vh;
+  }
+}
+@media (min-width: 1024px) {
   main .prevention .container-masc .separator-bottom {
     width: 70%;
   }
 }
 main .prevention .container-masc .item {
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  width: 60%;
-  height: 60vh;
+  width: 50%;
+  height: 65vh;
+}
+@media (min-width: 475px) {
+  main .prevention .container-masc .item {
+    width: 40%;
+    height: 55vh;
+  }
 }
 @media (min-width: 640px) {
   main .prevention .container-masc .item {
@@ -364,7 +527,13 @@ main .prevention .container-masc .item {
 @media (min-width: 1024px) {
   main .prevention .container-masc .item {
     width: 28vw;
-    height: 40vh;
+    height: 60vh;
+  }
+}
+@media (min-width: 1536px) {
+  main .prevention .container-masc .item {
+    width: 25vw;
+    height: 65vh;
   }
 }
 main .prevention .container-masc img {
@@ -393,6 +562,11 @@ main .prevention .container-masc h3 {
     font-size: 1.6rem;
   }
 }
+@media (min-width: 1536px) {
+  main .prevention .container-masc h3 {
+    font-size: 1.8rem;
+  }
+}
 main .prevention .container-masc ul {
   padding-left: 2rem;
   width: 90%;
@@ -406,16 +580,22 @@ main .prevention .container-masc ul li {
 }
 @media (min-width: 768px) {
   main .prevention .container-masc ul li {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 @media (min-width: 1024px) {
+  main .prevention .container-masc ul li {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1536px) {
   main .prevention .container-masc ul li {
     font-size: 1.4rem;
   }
 }
 main .prevention--female {
-  height: 395vh;
+  background-color: #fdefef;
+  height: 420vh;
 }
 @media (min-width: 640px) {
   main .prevention--female {
@@ -432,6 +612,17 @@ main .prevention--female {
     height: 95vh;
   }
 }
+@media (min-width: 1280px) {
+  main .prevention--female {
+    height: 145vh;
+  }
+}
+@media (min-width: 1536px) {
+  main .prevention--female {
+    margin-top: 2rem;
+    height: 160vh;
+  }
+}
 main .prevention--female h2 {
   background: linear-gradient(90deg, rgb(249, 1, 111) 0%, rgb(147, 8, 133) 35%, rgb(208, 56, 170) 70%, rgb(133, 28, 135) 100%);
   -webkit-background-clip: text;
@@ -442,7 +633,7 @@ main .alerts {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 110vh;
+  height: 80vh;
 }
 @media (min-width: 640px) {
   main .alerts {
@@ -451,13 +642,31 @@ main .alerts {
 }
 @media (min-width: 768px) {
   main .alerts {
-    height: 85vh;
+    height: 95vh;
   }
 }
 @media (min-width: 1024px) {
   main .alerts {
     height: 35vh;
   }
+}
+@media (min-width: 1280px) {
+  main .alerts {
+    height: 60vh;
+  }
+}
+@media (min-width: 1536px) {
+  main .alerts {
+    margin-top: 3rem;
+    height: 75vh;
+  }
+}
+main .alerts .separator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 50%;
 }
 @media (min-width: 1024px) {
   main .alerts .separator {
@@ -484,6 +693,11 @@ main .alerts h2 {
     font-size: 2.4rem;
   }
 }
+@media (min-width: 1536px) {
+  main .alerts h2 {
+    font-size: 3rem;
+  }
+}
 main .alerts .cards {
   display: flex;
   flex-direction: column;
@@ -508,6 +722,12 @@ main .alerts .cards .card {
     padding: 1rem;
   }
 }
+@media (min-width: 1536px) {
+  main .alerts .cards .card {
+    width: 45%;
+    padding: 2rem;
+  }
+}
 main .alerts .cards .card .box-title {
   display: flex;
   align-items: center;
@@ -516,6 +736,11 @@ main .alerts .cards .card .box-title {
 main .alerts .cards .card .box-title h3 {
   font-family: "Inter", sans-serif;
   font-size: 1rem;
+}
+@media (min-width: 640px) {
+  main .alerts .cards .card .box-title h3 {
+    font-size: 1.2rem;
+  }
 }
 @media (min-width: 768px) {
   main .alerts .cards .card .box-title h3 {
@@ -527,13 +752,28 @@ main .alerts .cards .card .box-title h3 {
     font-size: 1.6rem;
   }
 }
+@media (min-width: 1536px) {
+  main .alerts .cards .card .box-title h3 {
+    font-size: 1.8rem;
+  }
+}
 main .alerts .cards .card p {
   font-family: "Inter", sans-serif;
   font-size: 0.8rem;
 }
 @media (min-width: 768px) {
   main .alerts .cards .card p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  main .alerts .cards .card p {
     font-size: 1.2rem;
+  }
+}
+@media (min-width: 1536px) {
+  main .alerts .cards .card p {
+    font-size: 1.4rem;
   }
 }
 main .alerts .cards .card--pink {
@@ -598,6 +838,17 @@ footer {
     height: 40vh;
   }
 }
+@media (min-width: 1280px) {
+  footer {
+    height: 70vh;
+  }
+}
+@media (min-width: 1536px) {
+  footer {
+    margin-top: 2rem;
+    height: 50vh;
+  }
+}
 footer h4,
 footer p,
 footer a {
@@ -610,9 +861,18 @@ footer a {
   footer p,
   footer li,
   footer a {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-align: start;
     width: 100%;
+  }
+}
+@media (min-width: 1536px) {
+  footer h4,
+  footer p,
+  footer li,
+  footer a {
+    font-size: 1.2rem;
+    width: 90%;
   }
 }
 footer h4 {
@@ -645,6 +905,11 @@ footer .footer-content .footer-info img {
 @media (min-width: 640px) {
   footer .footer-content .footer-info img {
     width: 20vw;
+  }
+}
+@media (min-width: 640px) {
+  footer .footer-content .footer-info img {
+    width: 15vw;
   }
 }
 footer .footer-content .footer-info,
