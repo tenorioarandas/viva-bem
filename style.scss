@@ -1,10 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
 $font-title: "Poppins", sans-serif;
 $font-subtitle: "Inter", sans-serif;
-$color-blue: #1173d4;
 $title-color: #04031c;
 $subtitle-color: #4a4a4a;
+$bg-white: #f8f9fa;
+$color-blue: #1173d4;
+
 @mixin gradient-text {
   background: linear-gradient(
     90deg,
@@ -15,12 +25,11 @@ $subtitle-color: #4a4a4a;
   -webkit-text-fill-color: transparent;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
 header {
@@ -38,12 +47,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+    border-radius: 50px;
     width: 90%;
     height: 55%;
-    border-radius: 50px;
 
     img {
       width: 20vw;
+      height: 100%;
     }
 
     ul {
@@ -55,7 +66,17 @@ header {
         a {
           color: #ffffff;
           font-family: $font-subtitle;
-          font-size: 1.2rem;
+          font-size: 0.8rem;
+
+          @media (min-width: 640px) {
+            font-size: 1.2rem;
+          }
+          @media (min-width: 768px) {
+            font-size: 1.4rem;
+          }
+          @media (min-width: 1024px) {
+            font-size: 1.6rem;
+          }
         }
       }
     }
@@ -64,36 +85,72 @@ header {
 
 main {
   .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    @include flex-center-column;
     text-align: center;
-    height: 60vh;
+    height: 50vh;
+    @media (min-width: 1024px) {
+      height: 35vh;
+    }
 
     .gradient-text {
       @include gradient-text;
       font-family: $font-title;
-      font-size: 4rem;
+      font-size: 3rem;
+      width: 90%;
+      @media (min-width: 640px) {
+        font-size: 3.4rem;
+      }
+      @media (min-width: 768px) {
+        font-size: 4rem;
+      }
+      @media (min-width: 1024px) {
+        font-size: 5rem;
+      }
     }
 
     p {
       color: $subtitle-color;
       font-family: $font-subtitle;
-      font-size: 2.5rem;
+      font-size: 1.2rem;
+      width: 90%;
+      @media (min-width: 640px) {
+        font-size: 1.4rem;
+      }
+      @media (min-width: 768px) {
+        font-size: 1.6rem;
+      }
+      @media (min-width: 1024px) {
+        font-size: 2rem;
+      }
     }
 
     .box-btn {
       display: flex;
       justify-content: space-between;
-      width: 70%;
+      gap: 1rem;
+      @media (min-width: 768px) {
+        gap: 1.5rem;
+      }
+      @media (min-width: 1024px) {
+        gap: 2.5rem;
+      }
 
       button {
         font-family: $font-subtitle;
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         font-weight: 500;
         border-radius: 20px;
-        padding: 1.5rem;
+        padding: 1rem;
+        @media (min-width: 640px) {
+          font-size: 1.2rem;
+        }
+        @media (min-width: 768px) {
+          font-size: 1.4rem;
+        }
+        @media (min-width: 1024px) {
+          font-size: 1.6rem;
+          padding: 1.5rem;
+        }
       }
 
       .btn-blue {
@@ -107,6 +164,461 @@ main {
         color: $color-blue;
         border: solid 2px $color-blue;
       }
+    }
+  }
+
+  .exams {
+    @include flex-center-column;
+    background-color: $bg-white;
+    text-align: center;
+    height: 110vh;
+    @media (min-width: 1024px) {
+      height: 40vh;
+    }
+
+    h2 {
+      @include gradient-text;
+      font-family: $font-title;
+      font-size: 1.8rem;
+      width: 90%;
+      @media (min-width: 768px) {
+        font-size: 2.2rem;
+      }
+      @media (min-width: 1024px) {
+        font-size: 2.4rem;
+      }
+    }
+
+    p {
+      color: $subtitle-color;
+      font-family: $font-subtitle;
+      font-size: 1rem;
+      width: 90%;
+      @media (min-width: 768px) {
+        font-size: 1.4rem;
+      }
+      @media (min-width: 1024px) {
+        font-size: 1.6rem;
+      }
+    }
+
+    .container-cards {
+      @include flex-center-column;
+      height: 70%;
+      @media (min-width: 640px) {
+        height: 75%;
+      }
+      @media (min-width: 1024px) {
+        flex-direction: row;
+        height: 40%;
+      }
+
+      div {
+        @include flex-center-column;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        width: 70%;
+        height: 25%;
+        @media (min-width: 640px) {
+          height: 30%;
+        }
+        @media (min-width: 1024px) {
+          justify-content: space-evenly;
+          width: 30%;
+          height: 100%;
+        }
+
+        h3 {
+          color: $title-color;
+          font-family: $font-title;
+          font-size: 1.2rem;
+          @media (min-width: 768px) {
+            font-size: 1.4rem;
+          }
+          @media (min-width: 1024px) {
+            font-size: 1.6rem;
+          }
+        }
+
+        p {
+          color: $subtitle-color;
+          font-size: 1rem;
+          @media (min-width: 768px) {
+            font-size: 1.2rem;
+          }
+          @media (min-width: 1024px) {
+            font-size: 1.4rem;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .prevention {
+    @include flex-center-column;
+    height: 330vh;
+    @media (min-width: 640px) {
+      height: 280vh;
+    }
+    @media (min-width: 768px) {
+      height: 250vh;
+    }
+    @media (min-width: 1024px) {
+      height: 95vh;
+    }
+
+    h2 {
+      background: linear-gradient(
+        90deg,
+        rgba(51, 115, 210, 1) 0%,
+        rgba(111, 149, 199, 1) 25%,
+        rgba(123, 181, 245, 1) 50%,
+        rgba(0, 116, 238, 1) 75%,
+        rgba(94, 167, 239, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: $font-title;
+      font-size: 1.8rem;
+      @media (min-width: 768px) {
+        font-size: 2.2rem;
+      }
+      @media (min-width: 1024px) {
+        font-size: 2.4rem;
+        margin-top: 2rem;
+      }
+    }
+
+    .container-masc {
+      @include flex-center-column;
+      justify-content: space-between;
+      height: 95%;
+      @media (min-width: 1024px) {
+        justify-content: space-around;
+
+        .separator {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 100vw;
+          height: 40vh;
+        }
+
+        .separator-bottom {
+          width: 70%;
+        }
+      }
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        width: 60%;
+        height: 60vh;
+        @media (min-width: 640px) {
+          width: 40%;
+          height: 50vh;
+        }
+        @media (min-width: 768px) {
+          height: 45vh;
+        }
+        @media (min-width: 1024px) {
+          width: 28vw;
+          height: 40vh;
+        }
+      }
+
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 100%;
+        @media (min-width: 1024px) {
+          width: 100px;
+          height: 100px;
+        }
+      }
+
+      h3 {
+        color: $title-color;
+        font-family: $font-subtitle;
+        font-size: 1.2rem;
+        @media (min-width: 768px) {
+          font-size: 1.4rem;
+        }
+        @media (min-width: 1024px) {
+          font-size: 1.6rem;
+        }
+      }
+
+      ul {
+        padding-left: 2rem;
+        width: 90%;
+        height: 55%;
+        li {
+          color: $subtitle-color;
+          font-family: $font-subtitle;
+          font-size: 1rem;
+          list-style-type: disc;
+          @media (min-width: 768px) {
+            font-size: 1.2rem;
+          }
+          @media (min-width: 1024px) {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  .prevention--female {
+    height: 395vh;
+    @media (min-width: 640px) {
+      height: 340vh;
+    }
+    @media (min-width: 768px) {
+      height: 300vh;
+    }
+    @media (min-width: 1024px) {
+      height: 95vh;
+    }
+
+    h2 {
+      background: linear-gradient(
+        90deg,
+        rgba(249, 1, 111, 1) 0%,
+        rgba(147, 8, 133, 1) 35%,
+        rgba(208, 56, 170, 1) 70%,
+        rgba(133, 28, 135, 1) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .alerts {
+    @include flex-center-column;
+    height: 110vh;
+    @media (min-width: 640px) {
+      height: 75vh;
+    }
+    @media (min-width: 768px) {
+      height: 85vh;
+    }
+    @media (min-width: 1024px) {
+      height: 35vh;
+    }
+
+    .separator {
+      @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+      }
+    }
+
+    h2 {
+      @include gradient-text;
+      font-family: $font-title;
+      font-size: 1.8rem;
+      @media (min-width: 768px) {
+        font-size: 2.2rem;
+      }
+      @media (min-width: 1024px) {
+        font-size: 2.4rem;
+      }
+    }
+
+    .cards {
+      @include flex-center-column;
+      text-align: center;
+      height: 90%;
+
+      .card {
+        @include flex-center-column;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        width: 80%;
+        padding: 1.5rem;
+        @media (min-width: 1024px) {
+          width: 40%;
+          padding: 1rem;
+        }
+
+        .box-title {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+
+          h3 {
+            font-family: $font-subtitle;
+            font-size: 1rem;
+            @media (min-width: 768px) {
+              font-size: 1.4rem;
+            }
+            @media (min-width: 1024px) {
+              font-size: 1.6rem;
+            }
+          }
+        }
+
+        p {
+          font-family: $font-subtitle;
+          font-size: 0.8rem;
+          @media (min-width: 768px) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .card--pink {
+        background-color: #f9d5e5;
+        h3,
+        p {
+          color: #ad346a;
+        }
+        .box-title {
+          h3 {
+            margin-left: 0.2rem;
+          }
+        }
+      }
+
+      .card--blue {
+        background-color: #cfe2f3;
+        h3,
+        p {
+          color: #2769a3;
+        }
+      }
+
+      .card--green {
+        background-color: #d4edda;
+        h3,
+        p {
+          color: #244a2d;
+        }
+        .box-title {
+          h3 {
+            margin-left: 0.2rem;
+          }
+        }
+      }
+
+      .card--yellow {
+        background-color: #ffe9c2;
+        h3,
+        p {
+          color: #976c00;
+        }
+
+        .box-title {
+          h3 {
+            margin-left: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #313461;
+  @include flex-center-column;
+  text-align: center;
+  height: 80vh;
+  @media (min-width: 640px) {
+    height: 70vh;
+  }
+  @media (min-width: 768px) {
+    height: 50vh;
+  }
+  @media (min-width: 1024px) {
+    height: 40vh;
+  }
+
+  h4,
+  p,
+  a {
+    color: #ffffff;
+    font-size: 1rem;
+    width: 90%;
+  }
+
+  h4,
+  p,
+  li,
+  a {
+    @media (min-width: 1024px) {
+      font-size: 1.4rem;
+      text-align: start;
+      width: 100%;
+    }
+  }
+
+  h4 {
+    font-family: $font-title;
+  }
+
+  p,
+  a {
+    font-family: $font-subtitle;
+  }
+
+  .footer-content {
+    @include flex-center-column;
+    text-align: center;
+    border-bottom: solid 0.5px #ffffff;
+    width: 100%;
+    height: 90%;
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      text-align: start;
+      height: 80%;
+    }
+
+    .footer-info {
+      img {
+        width: 35vw;
+        @media (min-width: 640px) {
+          width: 20vw;
+        }
+      }
+    }
+
+    .footer-info,
+    .footer-links,
+    .footer-contact {
+      @include flex-center-column;
+      width: 100%;
+      @media (min-width: 1024px) {
+        @include flex-center-column;
+        justify-content: space-between;
+        width: 30vw;
+        height: 50%;
+      }
+    }
+
+    .footer-links {
+      ul {
+        @media (min-width: 1024px) {
+          @include flex-center-column;
+          width: 100%;
+          height: 80%;
+        }
+      }
+    }
+  }
+
+  .rights {
+    @include flex-center-column;
+    height: 20%;
+    @media (min-width: 1024px) {
+      text-align: center;
     }
   }
 }
